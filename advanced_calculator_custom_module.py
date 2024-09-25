@@ -1,0 +1,104 @@
+# advanced_calculator.py
+
+import mymath  # Import the custom math module
+
+def advanced_calculator():
+    print("Advanced Calculator")
+    print("Supported operations:")
+    print("1. Addition (+)")
+    print("2. Subtraction (-)")
+    print("3. Multiplication (*)")
+    print("4. Division (/)")
+    print("5. Power (^)")
+    print("6. Square Root (sqrt)")
+    print("7. Sine (sin)")
+    print("8. Cosine (cos)")
+    print("9. Tangent (tan)")
+    print("10. Logarithm (log)")
+    print("11. Factorial (factorial)")
+    print("Type 'q' to exit.")
+    
+    while True:
+        operation = input("\nChoose an operation (1-11 or 'q' to quit): ").strip()
+        
+        if operation == 'q':
+            print("Shutting down the calculator.")
+            break
+
+        if operation in ['1', '2', '3', '4', '5']:
+            try:
+                num1 = float(input("Enter the first number: "))
+                num2 = float(input("Enter the second number: "))
+                
+                if operation == '1':
+                    result = mymath.add(num1, num2)
+                elif operation == '2':
+                    result = mymath.subtract(num1, num2)
+                elif operation == '3':
+                    result = mymath.multiply(num1, num2)
+                elif operation == '4':
+                    result = mymath.divide(num1, num2)
+                elif operation == '5':
+                    result = mymath.power(num1, num2)
+
+                print(f"Result: {result}")
+            except ValueError as e:
+                print(f"Error: {e}")
+        
+        elif operation == '6':
+            try:
+                num = float(input("Enter the number: "))
+                result = mymath.sqrt(num)
+                print(f"Result: {result}")
+            except ValueError as e:
+                print(f"Error: {e}")
+        
+        elif operation == '7':
+            try:
+                num = float(input("Enter the angle in radians: "))
+                result = mymath.sin(num)
+                print(f"Result: {result}")
+            except ValueError as e:
+                print(f"Error: {e}")
+        
+        elif operation == '8':
+            try:
+                num = float(input("Enter the angle in radians: "))
+                result = mymath.cos(num)
+                print(f"Result: {result}")
+            except ValueError as e:
+                print(f"Error: {e}")
+        
+        elif operation == '9':
+            try:
+                num = float(input("Enter the angle in radians: "))
+                result = mymath.tan(num)
+                print(f"Result: {result}")
+            except ValueError as e:
+                print(f"Error: {e}")
+        
+        elif operation == '10':
+            try:
+                num = float(input("Enter the number: "))
+                base = input("Enter the logarithm base (default: e): ").strip()
+                if base == '':
+                    result = mymath.log(num)
+                else:
+                    base = float(base)
+                    result = mymath.log(num, base)
+                print(f"Result: {result}")
+            except ValueError as e:
+                print(f"Error: {e}")
+        
+        elif operation == '11':
+            try:
+                num = int(input("Enter a non-negative integer: "))
+                result = mymath.factorial(num)
+                print(f"Result: {result}")
+            except ValueError as e:
+                print(f"Error: {e}")
+        
+        else:
+            print("Error: Invalid operation selection.")
+
+advanced_calculator()
