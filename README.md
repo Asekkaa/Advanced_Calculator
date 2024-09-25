@@ -22,13 +22,13 @@ Features
         Invalid input handling.
         Large number overflow detection for factorial calculations.
 
-Requirements
+ ## Requirements
 
     Python 3.x
 
 The math module is part of Python's standard library, so no additional dependencies are required.
 
-Example Usage
+## Example Usage
 
     When prompted, enter the number corresponding to the operation you'd like to perform.
     For arithmetic operations, input two numbers when requested. For operations like square root, trigonometric functions, logarithms, and factorials, input one number.
@@ -60,6 +60,6 @@ Exit
 Type q at any time to quit the calculator.
 
 
-License
+## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
